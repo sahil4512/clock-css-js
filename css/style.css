@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: grey;
+  background-color: #000;
   font-family: "Ubuntu", sans-serif;
   font-size: 2rem;
   display: flex;
@@ -20,7 +20,7 @@ body {
 .clock {
   width: 300px;
   height: 300px;
-  border: 10px solid black;
+  border: 10px solid #fff;
   border-radius: 50%;
   position: relative;
   padding: 15px;
@@ -32,15 +32,50 @@ body {
   height: 100%;
   transform: translateY(-3px);
 }
-
+.clock-face::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 18px;
+  margin-left: -9px;
+  margin-top: -6px;
+  background: #fff;
+  z-index: 11;
+}
 .hand {
   width: 50%;
   height: 6px;
   background: black;
   position: absolute;
   top: 50%;
+
   transform-origin: 100%;
   transform: rotate(90deg);
-  transition: all 0.07s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.sec-hand {
+  width: 49%;
+  height: 2px;
+  background: rgb(220, 110, 110);
+  border-radius: 10px;
+}
+
+.min-hand {
+  width: 49%;
+  height: 4px;
+  z-index: 9;
+  background: rgb(130, 130, 215);
+  border-radius: 10px;
+}
+
+.hour-hand {
+  width: 50%;
+  height: 6px;
+  z-index: 3;
+  background: #ca6e23;
+  border-radius: 10px;
 }
