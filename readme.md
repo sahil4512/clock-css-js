@@ -6,7 +6,7 @@
 
 ### Links
 
-- Live Site URL: [Live Demo](https://glistening-panda-91f880.netlify.app/)
+- Live Site URL: [Live Demo](https://luxury-hummingbird-0b94ed.netlify.app/)
 
 ### Built with
 
